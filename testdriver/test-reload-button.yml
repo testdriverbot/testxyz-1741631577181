@@ -1,0 +1,13 @@
+version: 4.2.13
+session: 67cf32e50be0c78bafb2d422
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Click the "Reload" button.
+    commands:
+      - command: hover-text
+        text: Reload
+        description: reload button on the error page
+        action: click
