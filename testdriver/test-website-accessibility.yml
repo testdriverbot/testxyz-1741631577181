@@ -1,0 +1,19 @@
+version: 4.2.13
+session: 67cf32e5c16443a99d07e675
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Attempt to reload the page.
+    commands:
+      - command: press-keys
+        keys:
+          - control
+          - r
+  - prompt: >-
+      Assert that the website loads successfully without errors.  # Use the
+      content of the file from the environment
+    commands:
+      - command: assert
+        expect: the site can't be reached error is displayed
